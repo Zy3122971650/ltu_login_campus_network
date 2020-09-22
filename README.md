@@ -1,6 +1,7 @@
 # 辽宁工程技术大学校内登录校园网脚本
 
-执行`python3 ltu_router.py`脚本即可，其他js是从校园网拉下来做分析的。
+## 使用
+打开ltu_router.py修改你的登录账号和密码然后执行`python3 ltu_router.py`脚本即可，其他js是从校园网拉下来做分析的。
 
 ## 依赖
 利用pyexcejs库来执行js代码
