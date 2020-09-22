@@ -287,7 +287,7 @@ def get_token() -> str:
     global ip
     url = 'http://10.11.22.1/cgi-bin/get_challenge'
     random_num = random.randint(100, 999)
-    curr_time = time.time()
+    curr_time = int(time.time())
     params = {
         'callback': "jQuery112407427686790892722_1600685308"+str(random_num),
         'username': '2018230128@hcmcc',
@@ -531,7 +531,7 @@ def main():
     token = token['challenge']
     i = get_info(token)
     hmd5 = get_hdm5(token)
-    acid = '4'
+    acid = '4'#葫芦岛校区为4，其他校区需要自己打开chrome抓包查看
     n = '200'
     _type = '1'
     chksum = get_chsum(token=token,hmd5=hmd5,acid=acid,n=n,type=_type,i=i)
@@ -555,6 +555,6 @@ def main():
     print(r.text)
 
 ip = None
-username = 'xxxxx'
-passwd = 'xxxx'
+username = 'xxxxxxxxxxxxxxxx'  #账号
+passwd = 'xxxxxx'              #密码 
 main()
