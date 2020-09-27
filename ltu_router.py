@@ -523,7 +523,7 @@ def main():
         'Accept-Language': 'zh-CN,zh;q=0.9',
     }
     ###
-    ip = get_ip()
+    ip = input("ip:\n").strip() or get_ip()
     if ip==None:
         print('Can not get ip address')
         return -1
@@ -555,6 +555,8 @@ def main():
     print(r.text)
 
 ip = None
-username = 'xxxxxxxxxxxxxxxx'  #账号
-passwd = 'xxxxxx'              #密码 
+#username = 'xxxxxxxxxxxxxxxx'  #账号
+#passwd = 'xxxxxx'              #密码 
+username = input("校园网账号:\n").strip()
+passwd = input("校园网密码:\n").strip()
 main()
