@@ -2,8 +2,6 @@ import time
 import requests
 import json
 import random
-import hashlib
-
 
 def ltu_md5(a, b):
     import execjs
