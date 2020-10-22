@@ -282,13 +282,13 @@ def ltu_sha1(a):
 
 
 def get_token() -> str:
-    global ip
+    global ip,username
     url = 'http://10.11.22.1/cgi-bin/get_challenge'
     random_num = random.randint(100, 999)
     curr_time = int(time.time())
     params = {
         'callback': "jQuery112407427686790892722_1600685308"+str(random_num),
-        'username': '2018230128@hcmcc',
+        'username': username,
         'ip': ip,
         '_': curr_time
 
@@ -525,6 +525,7 @@ def main():
     if ip==None:
         print('Can not get ip address')
         return -1
+    print("ip:{}".format(ip))
     token = get_token()
     token = token['challenge']
     i = get_info(token)
